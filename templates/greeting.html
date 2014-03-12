@@ -1,13 +1,8 @@
-<html>
-  <head>
-    <title>Starter Flask Application</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-  </head>
-  <body>
+{% extends 'base.html'%} 
+{% block content %}
     <h1>Hello {{fullname}}!</h1>
     <ul>
       <li><a href="{{ url_for('example_form') }}">Back to form example</a></li>
       <li><a href="{{ url_for('index') }}">Back to main page</a></li>
     </ul>
-  </body>
-</html>
+{% endblock%}

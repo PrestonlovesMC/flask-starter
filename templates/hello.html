@@ -1,9 +1,5 @@
-<html>
-  <head>
-    <title>Starter Flask Application</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-  </head>
-  <body>
+{% extends 'base.html'%} 
+{% block content %}
     <h1>Hello from Python/Flask</h1>
     <form action="/hello" method="Post">
       <p>What is your name? </p>
@@ -11,5 +7,4 @@
       <input type="submit" value="Enter"/>
     </form>
     <a href="{{ url_for('index') }}">Back to main page</a>
-  </body>
-</html>
+{% endblock%}
