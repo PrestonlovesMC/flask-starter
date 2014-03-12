@@ -1,5 +1,6 @@
 h1 {
-    color: gold;
+color: #FF69B4;
+background-color: #112233;
 }
 h2{
 color: red;
@@ -8,4 +9,7 @@ font-size: 35px;
 }
 body {
     background-color: #AACCFF;
+}
+h4{
+color: #4B0082;
 }
