@@ -12,6 +12,14 @@ def example_form():
     elif request.method == 'POST':
         return render_template('greeting.html',
                                fullname=request.form['fullname'])
+
+@app.route("/tip-calc", methods=["GET","POST"])
+def tip_calc():
+    if request.method == 'GET':
+        return render_template('tip-calc.html')
+    elif request.method == 'POST':
+        return render_template('tip-calc.html')
+							   
 @app.route('/my-new-page')
 def my_new_function():
     print 'HELLO FROM MY NEW FUNCTION'

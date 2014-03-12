@@ -1,0 +1,16 @@
+{% extends 'base.html'%} 
+{% block content %}
+    <h1>How to calculate your dinner price!</h1>
+    <form action="/tip-calc" method="Post">
+      <p>Enter in the prices! </p>
+	  Tip
+      <input type="text" name="tip-perc"/>
+	  Meal
+      <input type="text" name="meal-price"/>
+	  Tax
+      <input type="text" name="tax-rate"/>
+      <input type="submit" value="Enter"/>
+    </form>
+	
+    <a href="{{ url_for('index') }}">Back to main page</a>
+{% endblock%}
