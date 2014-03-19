@@ -22,11 +22,13 @@ def tip_calc():
 		meal_price = float(request.form['meal-price'])
 		tax_rate = float(request.form['tax-rate'])
 		meal_plus_tax = meal_price + meal_price * tax_rate
+		meal_plus_tip = meal_plus_tax + meal_plus_tax * tip_perc
 		return render_template('tip-calc.html',
 			tip_perc=tip_perc,
 			meal_price=meal_price,
 			tax_rate=tax_rate,
-			meal_plus_tax=meal_plus_tax)
+			meal_plus_tax=meal_plus_tax,
+			meal_plus_tip=meal_plus_tip)
 							   
 @app.route('/my-new-page')
 def my_new_function():
