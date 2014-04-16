@@ -1,14 +1,14 @@
 {% extends 'base.html'%} 
 {% block content %}
     <h1>calculate your dinner price!</h1>
-    <form action="/tip-calc" method="Post">
+    <form action="tip-calc" method="Post">
       <p>Enter in the prices! </p>
 	  Tip
-      <input type="text" name="tip-perc" value={{tip_perc}} />
+      <input type="text" name="tip-perc" value="{{tip_perc}}" />
 	  Meal
-      <input type="text" name="meal-price" value={{meal_price}}/>
+      <input type="text" name="meal-price" value="{{meal_price}}"/>
 	  Tax
-      <input type="text" name="tax-rate" value={{tax_rate}}/>
+      <input type="text" name="tax-rate" value="{{tax_rate}}"/>
       <input type="submit" value="compute"/>
     </form>
 	<p>Tip-perc: {{ tip_perc }}</p>

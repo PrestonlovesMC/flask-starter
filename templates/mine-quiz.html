@@ -1,0 +1,20 @@
+{% extends 'base.html'%} 
+{% block content %}
+<form action="mine-quiz" method="Post">
+In 0.8.8, Mojang might add enderman to the PE edition of Minecraft.<br/>
+<input type="radio" name="question1" value="true"/>True
+<input type="radio" name="question1" value="false"/>False<br/>
+Do you have to smelt nether rack with a furnace to get nether bricks?<br/>
+<input type="radio" name="question2" value="true"/>True
+<input type="radio" name="question2" value="false"/>False<br/>
+Is it true that when you're in the End, you <em>CANNOT</em> leave unless you slay the ender dragon?<br/>
+<input type="radio" name="question3" value="true"/>True
+<input type="radio" name="question3" value="false"/>False<br/>
+Obsidian can <em>ONLY</em> be mined by a gold pickaxe.<br/>
+<input type="radio" name="question4" value="true"/>True
+<input type="radio" name="question4" value="false"/>False<br/>
+<input type="submit" value="Submit your quiz"/><br/>
+
+You scored {{perc_correct}}!!<br/>
+<a href="{{ url_for('index') }}">Back to main page</a>
+{% endblock%}

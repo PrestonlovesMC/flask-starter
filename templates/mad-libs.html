@@ -1,0 +1,19 @@
+{% extends 'base.html'%} 
+{% block content %}
+    <h1>Make your own Mad Lib!</h1>
+    <form action="/mad-libs" method="Post">
+      <p>Enter your favorite past time</p>
+      <input type="text" name="past_time" value="{{past_time}}"/>
+      <p>Enter your name</p>
+      <input type="text" name="name" value="{{name}}"/>
+      <p>Enter a car</p>
+      <input type="text" name="car" value="{{car}}"/>
+      <input type="submit" value="Enter"/>
+    </form>
+	{% if past_time and name and car %}
+	   <p>One day, a boy named {{name}} who loved to use {{past_time}} used it for way to long.
+	Then {{name}}'s arm shrivelled up and fell off! He looked at it and said, "Well, I can still play my {{past_time}}!"
+	{{name}} grabbed his {{past_time}} and his other arm fell off! Then a {{car}} came and ran him over. THE END</p>
+	{% endif %}
+    <a href="{{ url_for('index') }}">Back to main page</a>
+{% endblock%}
